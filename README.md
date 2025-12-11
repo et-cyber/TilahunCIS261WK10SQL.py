@@ -4,11 +4,11 @@
 
 import sqlite3
 
-# Create database connection
+# Create database connection and cursor
 conn = sqlite3.connect("phone.db")
 cursor = conn.cursor()
 
-# CREATE TABLE
+# CREATE TABLE statement
 cursor.execute("""
 CREATE TABLE phone (
     phone_id INT PRIMARY KEY,
@@ -38,7 +38,7 @@ DELETE FROM phone
 WHERE country_code = "XX"
 """)
 
-# DROP TABLE
+# DROP TABLE statement
 cursor.execute("""
 DROP TABLE phone
 """)
